@@ -12,6 +12,17 @@ class Saison
         return $stmt->fetchAll();
     }
 
+    public static function find(int $id): ?array
+    {
+        $pdo = Database::getConnection();
+        $stmt = $pdo->prepare('SELECT * FROM saison WHERE id = :id');
+        $stmt->execute(['id' => $id]);
+
+        $saison = $stmt->fetch();
+
+        return $saison ?: null;
+    }
+
     // Ajoute une nouvelle saison liée à une série
     public static function create(array $data): void
     {

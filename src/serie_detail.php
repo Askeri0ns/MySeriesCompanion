@@ -21,11 +21,26 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
         <?php foreach ($saisons as $saison): ?>
             <div class="card bg-base-100 shadow-md">
+                <figure class="h-40 bg-base-300">
+                    <?php if (!empty($saison['vignette'])): ?>
+                        <img src="<?= htmlspecialchars($saison['vignette']) ?>" alt="<?= htmlspecialchars($saison['nom']) ?>" class="object-cover w-full h-full">
+                    <?php else: ?>
+                        <span class="text-sm opacity-50">Pas de vignette</span>
+                    <?php endif; ?>
+                </figure>
                 <div class="card-body">
                     <h3 class="card-title"><?= htmlspecialchars($saison['nom']) ?></h3>
                     <p class="text-sm opacity-70">
                         Sortie le <?= (new DateTime($saison['date_sortie']))->format('d/m/Y') ?>
                     </p>
+                    <?php if (!empty($saison['resume'])): ?>
+                        <p class="line-clamp-3"><?= htmlspecialchars($saison['resume']) ?></p>
+                    <?php endif; ?>
+                    <div class="card-actions justify-end mt-2">
+                        <a href="index.php?page=saison_detail&id=<?= $saison['id'] ?>" class="btn btn-primary btn-sm">
+                            Voir le détail
+                        </a>
+                    </div>
                 </div>
             </div>
         <?php endforeach; ?>

@@ -4,6 +4,7 @@ require __DIR__ . '/../config/config.php';
 require __DIR__ . '/../src/Database.php';
 require __DIR__ . '/../src/Serie.php';
 require __DIR__ . '/../src/Saison.php';
+require __DIR__ . '/../src/Episode.php';
 require __DIR__ . '/../src/SerieController.php';
 
 $page = $_GET['page'] ?? 'serie_liste';
@@ -31,8 +32,13 @@ switch ($page) {
         $controller->ajouterSaison();
         break;
 
-    // Prochaine route à ajouter :
-    // case 'saison_detail':
+    case 'saison_detail':
+        $controller->detailSaison();
+        break;
+        
+    case 'episode_ajouter':
+        $controller->ajouterEpisode();
+        break;
 
     default:
         http_response_code(404);
