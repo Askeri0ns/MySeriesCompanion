@@ -15,14 +15,12 @@ Dans cette première version, il n'y a **pas de système d'inscription ni de con
 - **Détail d'une série** : informations de la série + liste de ses saisons + formulaire d'ajout de saison (nom, résumé, vignette, date de sortie).
 - **Détail d'une saison** : informations de la saison + liste de ses épisodes (ou message si aucun épisode) + formulaire d'ajout d'épisode (nom, résumé, vignette, date de sortie, durée en minutes).
 
-## Stack technique (proposition)
+## Stack technique
 
 - **Backend** : PHP (architecture MVC "maison", sans framework)
 - **Base de données** : MySQL / MariaDB
-- **Frontend** : HTML / CSS / JS vanilla
+- **Frontend** : HTML / Framework CSS (Tailwind + DaisyUI)
 - **Serveur local** : XAMPP / WAMP ou serveur intégré PHP
-
-*(Hypothèse posée par défaut, cohérente avec les autres projets PHP en cours — à adapter si un framework ou une stack différente est imposé.)*
 
 ## Installation
 
@@ -31,14 +29,6 @@ Dans cette première version, il n'y a **pas de système d'inscription ni de con
 3. Copier `config/config.example.php` vers `config/config.php` et renseigner les accès à la base de données.
 4. Lancer le serveur (Apache/PHP) et ouvrir `public/index.php` dans le navigateur.
 
-## Structure du projet
-
-Voir [ARCHITECTURE.md](./ARCHITECTURE.md) pour le détail de l'organisation du code, des routes et du modèle de données.
-
 ## Modèle de données
 
-Le modèle de données (MCD) définit 5 entités : `SERIE`, `SAISON`, `EPISODE`, `PERSONNE`, `REGARDER` (association entre `PERSONNE` et `EPISODE`). Voir le détail dans ARCHITECTURE.md.
-
-## Auteur
-
-J. Martins — Cahier des charges "My Series Companion"
+Le modèle de données (MCD) définit 5 entités : `SERIE`, `SAISON`, `EPISODE`, `PERSONNE`, `REGARDER` (association entre `PERSONNE` et `EPISODE`).
