@@ -33,6 +33,9 @@
                     <p class="text-sm opacity-70">
                         Sortie le <?= (new DateTime($episode['date_sortie']))->format('d/m/Y') ?>
                     </p>
+                    <?php if (!empty($episode['resume'])): ?>
+                        <p class="line-clamp-3"><?= htmlspecialchars($episode['resume']) ?></p>
+                    <?php endif; ?>
                     <?php if (!empty($episode['duree'])): ?>
                         <p class="text-lg font-bold text-primary">
                             Durée : <?= htmlspecialchars($episode['duree']) ?> minutes
