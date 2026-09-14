@@ -1,10 +1,9 @@
 # My Series Companion
 
-Projet de BTS SIO 2ème année d'application web permettant de garder en mémoire les séries qu'un utilisateur a regardées, avec le suivi de leurs saisons et épisodes.
-
 ## Contexte
 
-Dans cette première version, il n'y a **pas de système d'inscription ni de connexion** : on considère qu'une seule personne utilise le site.
+Projet de BTS SIO 2ème année d'application web permettant de garder en mémoire les séries qu'un utilisateur a regardées, avec le suivi de leurs saisons et épisodes.
+Dans cette version, il n'y a pas de système d'inscription ni de connexion : on considère qu'une seule personne utilise le site.
 
 ## Fonctionnalités
 
