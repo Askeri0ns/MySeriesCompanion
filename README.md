@@ -1,8 +1,6 @@
 # My Series Companion
 
-Application web permettant de garder en mémoire les séries qu'un utilisateur a regardées, avec le suivi de leurs saisons et épisodes.
-
-> Projet réalisé à partir du cahier des charges rédigé par J. Martins.
+Projet de BTS SIO 2ème année d'application web permettant de garder en mémoire les séries qu'un utilisateur a regardées, avec le suivi de leurs saisons et épisodes.
 
 ## Contexte
 
